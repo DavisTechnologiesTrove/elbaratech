@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Elbara Technologies - Expert Web Development, IT Support, Software Solutions in Tanzania" />
+  <meta name="keywords" content="Elbara, Tanzania, Website Development, IT Support, CCTV, Software Development" />
+  <meta name="author" content="Elbara Technologies" />
+  <title>Elbara Technologies - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Custom styles for modal gallery and dots */
+    #modalGallery img {
+      min-width: 100%;
+      cursor: pointer;
+    }
+    #dotsContainer button {
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-blue-600">Elbara Technologies</div>
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="index.html" class="hover:text-blue-600">Services</a>
+        <a href="index.html" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Portfolio</a>
+        <a href="#blog.html" class="hover:text-blue-600">Blog</a>
+        <a href="index.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#services" class="block py-2">Services</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#projects" class="block py-2">Portfolio</a>
+      <a href="#blog" class="block py-2">Blog</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold mb-10 text-center">Our Portfolio</h2>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center space-x-4 mb-10">
+      <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded transition-colors duration-300" data-filter="all">All</button>
+      <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded transition-colors duration-300" data-filter="web">Web Development</button>
+      <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded transition-colors duration-300" data-filter="mobile">Mobile Apps</button>
+      <button class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded transition-colors duration-300" data-filter="design">Design</button>
+    </div>
+
+    <!-- Grid Projects -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project 1: Tanza Ride -->
+      <div class="project-item bg-white rounded-lg shadow overflow-hidden" data-category="mobile">
+        <img src="tanza-ride1.jpg" alt="Tanza Ride" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Tanza Ride</h3>
+          <p class="text-gray-600 mb-4">Application for booking any type of transport worldwide quickly and securely.</p>
+          <a href="#" data-project="tanzaRide" class="view-project-btn bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 active:bg-blue-800 transition duration-300 inline-block">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2: Pika Nsa -->
+      <div class="project-item bg-white rounded-lg shadow overflow-hidden" data-category="mobile">
+        <img src="pika-nsa1.jpg" alt="Pika Nsa" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Pika Nsa</h3>
+          <p class="text-gray-600 mb-4">Mobile app for quick and delicious local recipes at your fingertips.</p>
+          <a href="#" data-project="pikaNsa" class="view-project-btn bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 active:bg-blue-800 transition duration-300 inline-block">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3: Jenga Nasi -->
+      <div class="project-item bg-white rounded-lg shadow overflow-hidden" data-category="web">
+        <img src="jenga-nasi1.jpg" alt="Jenga Nasi" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Jenga Nasi</h3>
+          <p class="text-gray-600 mb-4">Online platform and app for construction materials sales across Tanzania.</p>
+          <a href="#" data-project="jengaNasi" class="view-project-btn bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 active:bg-blue-800 transition duration-300 inline-block">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 4: Ges Online -->
+      <div class="project-item bg-white rounded-lg shadow overflow-hidden" data-category="web">
+        <img src="ges-online1.jpg" alt="Ges Online" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Ges Online</h3>
+          <p class="text-gray-600 mb-4">E-commerce app and website for selling gas and related products efficiently.</p>
+          <a href="#" data-project="gesOnline" class="view-project-btn bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 active:bg-blue-800 transition duration-300 inline-block">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 5: Business Management -->
+      <div class="project-item bg-white rounded-lg shadow overflow-hidden" data-category="web">
+        <img src="business-management1.jpg" alt="Business Management System" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Business Management System</h3>
+          <p class="text-gray-600 mb-4">Custom software for streamlining business processes and boosting efficiency.</p>
+          <a href="#" data-project="businessManagement" class="view-project-btn bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 active:bg-blue-800 transition duration-300 inline-block">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal for Project Details -->
+  <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden p-6 relative flex flex-col">
+
+      <!-- Close button -->
+      <button id="modalClose" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold z-50">&times;</button>
+
+      <!-- Title -->
+      <h3 id="modalTitle" class="text-3xl font-bold mb-4"></h3>
+
+      <!-- Slideshow container -->
+      <div class="relative w-full flex-1 select-none">
+
+        <!-- Images container -->
+        <div id="modalGallery" class="flex transition-transform duration-500 ease-in-out overflow-hidden rounded-lg h-64 sm:h-80">
+          <!-- Images inserted dynamically here -->
+        </div>
+
+        <!-- Dots navigation -->
+        <div id="dotsContainer" class="flex justify-center mt-3 space-x-2">
+          <!-- dots inserted dynamically -->
+        </div>
+      </div>
+
+      <!-- Short intro with "Click to Read" button -->
+      <div class="mt-6 border-t pt-4">
+        <p id="modalShortIntro" class="text-gray-700 mb-4"></p>
+        <button id="readMoreBtn" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+          Click to Read
+        </button>
+      </div>
+
+      <!-- Full description - initially hidden -->
+      <div id="modalFullDescription" class="mt-4 text-gray-700 whitespace-pre-line hidden max-h-48 overflow-auto border-t pt-4"></div>
+
+    </div>
+  </div>
+
+  <!-- Footer and Media -->
+  <footer class="bg-gray-900 text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-lg font-semibold mb-4">Follow Us</p>
+      <div class="flex justify-center space-x-6 text-2xl">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="mt-6 text-sm">&copy; 2025 Elbara Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Book Service Button -->
+  <a
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Filter projects
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-blue-600', 'text-white');
+          b.classList.add('bg-gray-200', 'text-gray-800');
+        });
+        btn.classList.add('bg-blue-600', 'text-white');
+        btn.classList.remove('bg-gray-200', 'text-gray-800');
+
+        projects.forEach(project => {
+          if (filter === 'all' || project.dataset.category === filter) {
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Modal and slideshow functionality
+
+    const projectData = {
+      tanzaRide: {
+        title: "Tanza Ride",
+        shortIntro: "An app for booking various types of transport worldwide quickly and securely.",
+        fullDescription: `Tanza Ride is an application for booking various types of transport worldwide.
+Users can choose buses, taxis, or flights to travel securely and conveniently.
+It supports multiple payment methods and real-time tracking of rides.`,
+        images: [
+          "tanza-ride1.jpg", "tanza-ride2.jpg", "tanza-ride3.jpg", "tanza-ride4.jpg", "tanza-ride5.jpg",
+          "tanza-ride6.jpg", "tanza-ride7.jpg", "tanza-ride8.jpg", "tanza-ride9.jpg", "tanza-ride10.jpg"
+        ]
+      },
+      pikaNsa: {
+        title: "Pika Nsa",
+        shortIntro: "Mobile app for quick and delicious local recipes at your fingertips.",
+        fullDescription: `Pika Nsa is a mobile application offering a rich variety of local recipes.
+Users can browse, save, and share cooking ideas quickly.
+The app supports video tutorials and shopping list features.`,
+        images: [
+          "pika-nsa1.jpg", "pika-nsa2.jpg", "pika-nsa3.jpg", "pika-nsa4.jpg", "pika-nsa5.jpg",
+          "pika-nsa6.jpg", "pika-nsa7.jpg", "pika-nsa8.jpg", "pika-nsa9.jpg", "pika-nsa10.jpg"
+        ]
+      },
+      jengaNasi: {
+        title: "Jenga Nasi",
+        shortIntro: "Online platform and app for construction materials sales across Tanzania.",
+        fullDescription: `Jenga Nasi is a web and mobile platform connecting buyers with construction suppliers.
+It offers a wide catalog of building materials, fast delivery, and reliable payment options.
+Ideal for contractors and individuals needing quality materials.`,
+        images: [
+          "jenga-nasi1.jpg", "jenga-nasi2.jpg", "jenga-nasi3.jpg", "jenga-nasi4.jpg", "jenga-nasi5.jpg",
+          "jenga-nasi6.jpg", "jenga-nasi7.jpg", "jenga-nasi8.jpg", "jenga-nasi9.jpg", "jenga-nasi10.jpg"
+        ]
+      },
+      gesOnline: {
+        title: "Ges Online",
+        shortIntro: "E-commerce app and website for selling gas and related products efficiently.",
+        fullDescription: `Ges Online provides an e-commerce platform for gas and related products sales.
+It supports order tracking, secure payments, and customer support.
+Designed to serve both retailers and end consumers.`,
+        images: [
+          "ges-online1.jpg", "ges-online2.jpg", "ges-online3.jpg", "ges-online4.jpg", "ges-online5.jpg",
+          "ges-online6.jpg", "ges-online7.jpg", "ges-online8.jpg", "ges-online9.jpg", "ges-online10.jpg"
+        ]
+      },
+      businessManagement: {
+        title: "Business Management System",
+        shortIntro: "Custom software for streamlining business processes and boosting efficiency.",
+        fullDescription: `This Business Management System software streamlines accounting, inventory, staff, and sales tracking.
+It integrates with various modules for comprehensive business oversight.
+Built for scalability and ease of use.`,
+        images: [
+          "business-management1.jpg", "business-management2.jpg", "business-management3.jpg", "business-management4.jpg", "business-management5.jpg",
+          "business-management6.jpg", "business-management7.jpg", "business-management8.jpg", "business-management9.jpg", "business-management10.jpg"
+        ]
+      }
+    };
+
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalGallery = document.getElementById('modalGallery');
+    const dotsContainer = document.getElementById('dotsContainer');
+    const modalShortIntro = document.getElementById('modalShortIntro');
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const modalFullDescription = document.getElementById('modalFullDescription');
+    const modalClose = document.getElementById('modalClose');
+
+    let currentSlideIndex = 0;
+    let slideInterval = null;
+
+    function showSlide(index) {
+      const totalSlides = modalGallery.children.length;
+      if (index >= totalSlides) index = 0;
+      if (index < 0) index = totalSlides - 1;
+      currentSlideIndex = index;
+
+      const slideWidth = modalGallery.clientWidth;
+      modalGallery.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
+
+      Array.from(dotsContainer.children).forEach((dot, idx) => {
+        if(idx === currentSlideIndex) {
+          dot.classList.add('bg-blue-600');
+          dot.classList.remove('bg-gray-300');
+        } else {
+          dot.classList.remove('bg-blue-600');
+          dot.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    function startSlideShow() {
+      if(slideInterval) clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
+      }, 4000);
+    }
+
+    function stopSlideShow() {
+      if(slideInterval) clearInterval(slideInterval);
+    }
+
+    function openModal(projectKey) {
+      const project = projectData[projectKey];
+      if (!project) return;
+
+      modalTitle.textContent = project.title;
+      modalShortIntro.textContent = project.shortIntro;
+      modalFullDescription.textContent = project.fullDescription;
+      modalFullDescription.classList.add('hidden');
+      readMoreBtn.textContent = 'Click to Read';
+
+      modalGallery.innerHTML = '';
+      dotsContainer.innerHTML = '';
+
+      project.images.forEach((src, idx) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `${project.title} Image ${idx+1}`;
+        img.className = "flex-shrink-0 w-full object-cover rounded-lg";
+        img.style.minWidth = "100%";
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+          stopSlideShow();
+          showSlide(currentSlideIndex + 1);
+          startSlideShow();
+        });
+        modalGallery.appendChild(img);
+
+        const dot = document.createElement('button');
+        dot.className = "w-3 h-3 rounded-full bg-gray-300 focus:outline-none";
+        dot.addEventListener('click', () => {
+          stopSlideShow();
+          showSlide(idx);
+          startSlideShow();
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      showSlide(0);
+      startSlideShow();
+
+      modal.classList.remove('hidden');
+    }
+
+    readMoreBtn.addEventListener('click', () => {
+      if(modalFullDescription.classList.contains('hidden')) {
+        modalFullDescription.classList.remove('hidden');
+        readMoreBtn.textContent = 'Read Less';
+      } else {
+        modalFullDescription.classList.add('hidden');
+        readMoreBtn.textContent = 'Click to Read';
+      }
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      stopSlideShow();
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        stopSlideShow();
+      }
+    });
+
+    document.querySelectorAll('.view-project-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectKey = btn.getAttribute('data-project');
+        openModal(projectKey);
+      });
+    });
+  </script>
+</body>
+</html>
